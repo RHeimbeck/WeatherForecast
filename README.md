@@ -19,8 +19,9 @@ This project is currently running live at http://reidright.net/weather
 
 ### Future Improvements
 1.  Enhance the UI/UX.  The current look is rudimentary - I am more of a web programmer than a web designer. :)
-2.  Add a map of the current location for reference.
-3.  Add graphs and charts of weather data.
-4.  Add critical weather alert notifications.
-5.  Provide the weather and geolocation data through a web service to keep the 'key' data private.  Perhaps the whole application might be better suited as a asp.net, php, or node "server application" rather than a simple JavaScript "web application".
+2.  Display the wind direction as ordinal coordinates (N, S, NE, NNW, ENE, etc.) rather than degrees, as people can relate better to this type of wind direction information.
+3.  Add a map of the current location for reference.
+4.  Add graphs and charts of weather data.
+5.  Add critical weather alert notifications.
+6.  Provide the weather and geolocation data through a web service to keep the 'key' data private.  Perhaps the whole application might be better suited as a asp.net, php, or node "server application" rather than a simple JavaScript "web application".
 
