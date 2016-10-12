@@ -1,0 +1,23 @@
+<div class="weekly-forecast-container" ng-controller="forecastController as forecastCtrl">
+    <div class="error-report">{{errorMsg}}</div>
+    <div class="current-conditions">
+        <div class="current-location centered">{{currentLocation}}</div>
+        <div class="current-time centered">{{current.time * 1000 | date:'MMMM dd, yyyy'}}</div>
+        <div class="current-conditions-title centered">Current Conditions</div>
+        <weather-icon class="current-icon centered" icon="{{current.icon}}"></weather-icon>
+        <div class="current-summary centered">{{current.summary}}</div>
+        <div class="current-temp centered">Temperature: {{current.temperature | number:1}} &deg;F, feels like {{current.apparentTemperature | number:1}} &deg;F</div>
+        <div class="current-wind centered">Wind Speed: {{current.windSpeed | number:1}} mph from {{current.windBearing | number:1}}&deg</div>
+        <div class="forecast-title centered spaced">Week Ahead Forecast</div>
+        <div class="current-summary centered">{{forecastSummary}}</div>
+    </div>
+    <div class="daily-forecast-container">
+        <div class="daily-forecast" ng-repeat="day in dailyData">
+            <div class="daily-date centered">{{day.time * 1000 | date:'EEEE'}}</div>
+            <weather-icon class="daily-icon centered" icon="{{day.icon}}"></weather-icon>
+            <div class="daily-summary spaced">{{day.summary}}</div>
+            <div class="daily-high-temp">High: {{day.temperatureMax | number:1}} &deg;F </div>
+            <div class="daily-low-temp">Low: {{day.temperatureMin | number:1}} &deg;F</div>
+        </div>
+    </div>
+</div>

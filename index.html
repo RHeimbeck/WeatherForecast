@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WeatherForecast">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather Forecast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/weatherforecast.css" />
+    <link rel="stylesheet" href="css/weather-icons.css" />
+    <link rel="stylesheet" href="css/weather-icons-wind.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<div class="main-container">
+    <div class="address-input">
+        <div class="app-title">Weather Demo app <a href="https://darksky.net/poweredby/" target="_blank">Powered By DarkSky</a></div>
+        <div class="address-instructions">Enter an address, then select forecast</div>
+        Address: <input type="text" ng-model="address" required ng-trim="false" size="30" maxlength=75
+                        placeholder="Enter full address or just city" onchange="location.href='#/'"><br>
+        <a class="w3-btn w3-teal spaced" href="#/forecast">Forecast</a>
+        <a class="w3-btn w3-teal spaced" href="#/currentDetailed">Today's Details</a>
+    </div>
+
+    <div class="weather-wrapper">
+        <div ng-view></div>
+    </div>
+</div>
+
+<!-- Load Js libs -->
+<script src="./js/vendor/jquery-2.1.3.min.js"></script>
+<script src="./js/vendor/angular.js"></script>
+<script src="./js/vendor/angular-route.js"></script>
+
+<script src="./js/weatherforecast.js"></script>
+<script src="./js/routes.js"></script>
+
+<!-- Services -->
+<script src="./js/services/darkSky.js"></script>
+<script src="./js/services/googleGeolocation.js"></script>
+
+<!-- Controllers -->
+<script src="js/controllers/forecast.js"></script>
+
+<!-- Directives -->
+<script src="js/directives/weather-icon.js"></script>
+
+</body>
+</html>

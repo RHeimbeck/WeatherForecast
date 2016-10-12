@@ -1,0 +1,28 @@
+<div class="current-details-container" ng-controller="forecastController as forecastCtrl">
+    <div class="error-report">{{errorMsg}}</div>
+    <div class="current-conditions">
+        <div class="current-location centered">{{currentLocation}}</div>
+        <div class="current-time centered">{{current.time * 1000 | date:'MMMM dd, yyyy'}}</div>
+        <div class="current-conditions-title centered">Current Conditions</div>
+        <weather-icon class="current-icon centered" icon="{{current.icon}}"></weather-icon>
+        <div class="data-table spaced">
+            <table class="current-weather-data">
+                <tr><th>element</th><th>now</th><th>units</th></tr>
+                <tr><td>temperature</td><td>{{current.temperature | number:1}}</td><td>&deg;F</td></tr>
+                <tr><td>apparent temperature</td><td>{{current.apparentTemperature | number:1}}</td><td>&deg;F</td></tr>
+                <tr><td>wind speed</td><td>{{current.windSpeed | number:1}}</td><td>mph</td></tr>
+                <tr><td>wind direction</td><td>{{current.windBearing | number:1}}</td><td>degrees</td></tr>
+                <tr><td>precipitation</td><td>{{current.precipType}}</td><td></td></tr>
+                <tr><td>precipitation intensity</td><td>{{current.precipIntensity}}</td><td>in/hr</td></tr>
+                <tr><td>precipitation probability</td><td>{{current.precipProbability}}</td><td>%</td></tr>
+                <tr><td>humidity</td><td>{{current.humidity * 100 | number:1}}</td><td>%</td></tr>
+                <tr><td>dew point</td><td>{{current.dewPoint | number:1}}</td><td>&deg;F</td></tr>
+                <tr><td>barometric pressure</td><td>{{current.pressure | number:1}}</td><td>mBars</td></tr>
+                <tr><td>visibility</td><td>{{current.visibility | number:1}}</td><td>miles</td></tr>
+                <tr><td>cloud cover</td><td>{{current.cloudCover * 100 | number:0}}</td><td>%</td></tr>
+                <tr><td>ozone</td><td>{{current.ozone | number:1}}</td><td>ppm</td></tr>
+                <tr><td>nearest storm</td><td>{{current.nearestStormDistance}}</td><td>miles</td></tr>
+            </table>
+        </div>
+    </div>
+</div>

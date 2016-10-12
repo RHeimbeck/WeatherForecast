@@ -1,0 +1,107 @@
+body {
+    direction: ltr;
+    background-color:lightgrey;
+}
+.centered {
+    text-align: center;
+    margin: auto;
+}
+
+.spaced {
+    margin-top: 10px;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+    min-width:400px;
+}
+
+.address-input {
+    height: 130px;
+    width: 400px;
+    margin: auto;
+}
+
+.error-report {
+    font-size: 16px;
+    color: red;
+}
+
+.current-location,
+.current-time {
+    font-size: 50px;
+}
+
+.current-icon {
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+    display: block;
+}
+.current-icon .wi {
+    font-size: 46px;
+}
+
+.forecast-title,
+.current-conditions-title {
+    font-size: 30px;
+}
+
+.address-instructions,
+.current-summary,
+.current-temp,
+.current-wind {
+    font-size: 20px;
+}
+.daily-forecast-container{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 1684px;
+    margin: auto;
+}
+
+.daily-forecast {
+    border-radius: 5px;
+    background-color: #00bcd4;
+    height: 220px;
+    width: 200px;
+    margin: 5px 5px;
+    padding: 5px;
+}
+
+.daily-date {
+    text-align: center;
+    font-size: 20px;
+}
+.daily-icon {
+    height: 28px;
+    width: 28px;
+    padding: 2px;
+    display: block;
+}
+.daily-icon .wi {
+    font-size:24px;
+}
+
+table.current-weather-data {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+}
+
+table.current-weather-data td,
+table.current-weather-data th {
+    border: 1px solid #00bcd4;
+    text-align: left;
+    padding: 8px;
+}
+
+table.current-weather-data tr:nth-child(even) {
+    background-color: #00bcd4;
+}
