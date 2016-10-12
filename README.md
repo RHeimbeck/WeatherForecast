@@ -24,4 +24,5 @@ This project is currently running live at http://reidright.net/weather
 4.  Add graphs and charts of weather data.
 5.  Add critical weather alert notifications.
 6.  Provide the weather and geolocation data through a web service to keep the 'key' data private.  Perhaps the whole application might be better suited as a asp.net, php, or node "server application" rather than a simple JavaScript "web application".
+7.  Add Grunt build tasks to Lint, Concatenate, and Uglify (minify) the code.  Also switch over to using ".min" version of libraries.
 
