@@ -7,6 +7,9 @@ angular.module('WeatherForecast')
             .when('/currentDetailed', {
                 templateUrl: 'templates/pages/currentDetailed/index.html'
             })
+            .when('/alerts', {
+                templateUrl: 'templates/pages/alerts/alerts.html'
+            })
             .when('/', {
                 templateUrl: 'templates/pages/blank/index.html'
             })

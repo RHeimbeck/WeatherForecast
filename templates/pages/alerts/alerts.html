@@ -1,0 +1,10 @@
+<div class="alerts-container" ng-controller="forecastController as forecastCtrl">
+    <div ng-hide="alerts.length" class="no-alerts">No Active Alerts</div>
+    <div class="weather-alert spaced" ng-repeat="alert in alerts">
+        <h3>{{alert.title}}</h3>
+        <h4>Expires: {{alert.expires * 1000 | date:'MM/dd/yyyy h:mm a'}}</h4>
+        <p>{{alert.description}}</p>
+        <a href="{{alert.uri}}" target="_blank">More info.</a>
+    </div>
+    <hr />
+</div>

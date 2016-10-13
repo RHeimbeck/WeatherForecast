@@ -8,7 +8,9 @@
         <div class="current-summary centered">{{current.summary}}</div>
         <div class="current-temp centered">Temperature: {{current.temperature | number:1}} &deg;F, feels like {{current.apparentTemperature | number:1}} &deg;F</div>
         <div class="current-wind centered">Wind Speed: {{current.windSpeed | number:1}} mph from {{current.windBearing | number:1}}&deg</div>
-        <div class="forecast-title centered spaced">Week Ahead Forecast</div>
+        <div class="forecast-title centered spaced">Week Ahead Forecast&nbsp&nbsp
+            <a ng-show="alerts.length" class="weather-alerts css3-blink" href="#/alerts">*Alerts*</a>
+        </div>
         <div class="current-summary centered">{{forecastSummary}}</div>
     </div>
     <div class="daily-forecast-container">
