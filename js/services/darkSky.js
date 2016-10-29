@@ -1,7 +1,7 @@
 angular.module("WeatherForecast")
     .factory("darkSky", ['$http', function darkSkyFactory($http){
-        // TODO! remove this key value and have the user enter it
-        var key = "cae61007484092772799865f39479644";
+        // TODO! Insert your DarkSky private key here.
+        var key = "";
         return {
           forecast: function(latitude, longitude){
               //https://api.darksky.net/forecast/[key]/[latitude],[longitude]
