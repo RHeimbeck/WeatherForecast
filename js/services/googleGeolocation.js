@@ -1,6 +1,7 @@
 angular.module("WeatherForecast")
     .factory("googleGeolocation", ['$http', function googleGeolocationFactory($http){
-        var key = 'AIzaSyAVFa5SVPVPlDhUe31ShOHGpC29jGr1N6o';
+        //todo: insert google geoloc private key here.
+        var key = '';
         return {
             getByLocation: function(latitude, longitude){
                 //http://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&sensor=true&key=YOUR_API_KEY
